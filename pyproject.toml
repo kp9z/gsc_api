@@ -17,6 +17,7 @@ classifiers = [
 keywords = ["feed", "reader", "tutorial"]
 dependencies = [
     "google-api-python-client",
+    "pandas"
 ]
 requires-python = ">=3.9"
 
