@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/gsc_api/__init__.py
+src/gsc_api/__main__.py
+src/gsc_api/api.py
+src/kp_gscapi.egg-info/PKG-INFO
+src/kp_gscapi.egg-info/SOURCES.txt
+src/kp_gscapi.egg-info/dependency_links.txt
+src/kp_gscapi.egg-info/entry_points.txt
+src/kp_gscapi.egg-info/top_level.txt
