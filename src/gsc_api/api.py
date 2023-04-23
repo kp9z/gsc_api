@@ -154,16 +154,17 @@ class GoogleSeachConsoleAPI:
         response = self.service.searchanalytics().query(siteUrl=self.default_site, body=body).execute()
         return response
 
-    def get_search_analytics_all(self,max_export=None,row_limit = 25_000):
+    def get_search_analytics_all(self,max_export=None,row_limit = 25_000,format = "DataFrame"):
         """
         Retrieves all available search analytics data for the default site.
-
+        
         Args:
             max_export (int): The maximum number of rows to retrieve.
             row_limit (int): The maximum number of rows to retrieve per query.
+            format (str): The format of the returned data. Can be "DataFrame" or "list".
 
         Returns:
-            list: A list containing all available search analytics data.
+            DataFrame or list: The search analytics data in the specified format.
 
         """
         dimensions = ['query','page']
@@ -178,6 +179,9 @@ class GoogleSeachConsoleAPI:
 
             if max_export and start_row > max_export:
                 break
+        
+        if format == "DataFrame":
+            data = self.convert_to_df(data,dimensions)
 
         return data
 
