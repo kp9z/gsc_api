@@ -157,7 +157,7 @@ class GoogleSeachConsoleAPI:
     def get_search_analytics_all(self,max_export=None,row_limit = 25_000,format = "DataFrame"):
         """
         Retrieves all available search analytics data for the default site.
-        
+
         Args:
             max_export (int): The maximum number of rows to retrieve.
             row_limit (int): The maximum number of rows to retrieve per query.
@@ -172,7 +172,7 @@ class GoogleSeachConsoleAPI:
         data = []
 
         while (start_row%row_limit == 0) or (start_row == 0):
-            print(f'Exporting up to {start_row+row_limit} rows')
+            print(f'Fetching up to {start_row+row_limit:,} rows')
             response = self.get_search_analytics(dimensions,start_row, row_limit)
             start_row += len(response['rows'])
             data.extend(response['rows'])
