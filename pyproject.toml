@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "kp-gscapi"
-version = "1.1.0"
+version = "1.2.0"
 description = "Custom wrapper for Google Search Console API"
 readme = "README.md"
 authors = [{ name = "Kenny", email = "hi@anhtrinh.com" }]
@@ -31,7 +31,7 @@ Homepage = "https://github.com/kp9z"
 realpython = "reader.__main__:main"
 
 [tool.bumpver]
-current_version = "1.1.0"
+current_version = "1.2.0"
 version_pattern = "MAJOR.MINOR.PATCH"
 commit_message = "bump version {old_version} -> {new_version}"
 commit = true
